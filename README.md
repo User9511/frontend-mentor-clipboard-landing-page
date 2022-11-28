@@ -1,8 +1,7 @@
 ### Links
 
 - Solution URL: (https://www.frontendmentor.io/solutions/clipboard-landing-page-with-css-grid-and-flexbox-vebzO1g9zi)
-- Live Site URL: (https://smgy94.github.io/front-end-mentor-projects/clipboard-landing-page-master/)
-
+- Live Site URL: (https://smgy94.github.io/frontend-mentor-clipboard-landing-page/)
 
 # Frontend Mentor - Clipboard landing page solution
 
@@ -17,7 +16,6 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
-
 
 ### Original Design
 
