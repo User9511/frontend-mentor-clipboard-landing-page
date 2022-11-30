@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,12 +9,26 @@
 }
 
 :root {
-  --Strong-Cyan: hsl(171, 66%, 44%);
-  --Light-Blue: hsl(233, 100%, 69%);
-  --Lighter-Blue: hsl(233, 100%, 78%);
+  --Dark-Green: hsl(171, 67%, 30%);
+  --Darker-Green: hsl(171, 66%, 17%);
+  --Light-Blue: hsl(233, 100%, 41%);
+  --Lighter-Blue: hsl(233, 40%, 50%);
   --Dark-Grayish-Blue: hsl(210, 10%, 33%);
-  --Grayish-Blue: hsl(201, 11%, 66%);
+  --Grayish-Blue: hsl(201, 11%, 25%);
   --Light-Grey: hsla(0, 0%, 90%, 0.745);
+
+  /* Font Sizes */
+  --step--5: clamp(0.8rem, calc(0.77rem + 0.16vw), 0.94rem);
+  --step--4: clamp(0.96rem, calc(0.91rem + 0.24vw), 1.18rem);
+  --step--3: clamp(1.16rem, calc(1.07rem + 0.35vw), 1.47rem);
+  --step--2: clamp(1.39rem, calc(1.27rem + 0.51vw), 1.84rem);
+  --step--1: clamp(1.67rem, calc(1.5rem + 0.71vw), 2.3rem);
+  --step-0: clamp(2rem, calc(1.77rem + 0.98vw), 2.88rem);
+  --step-1: clamp(2.4rem, calc(2.09rem + 1.34vw), 3.59rem);
+  --step-2: clamp(2.88rem, calc(2.46rem + 1.81vw), 4.49rem);
+  --step-3: clamp(3.46rem, calc(2.89rem + 2.42vw), 5.62rem);
+  --step-4: clamp(4.15rem, calc(3.39rem + 3.22vw), 7.02rem);
+  --step-5: clamp(4.98rem, calc(3.98rem + 4.26vw), 8.77rem);
 }
 
 body {
@@ -38,14 +52,8 @@ p {
   line-height: 1.5;
 }
 
-.sub-text {
-  line-height: 2;
-}
-
-/* Header */
 .intro {
   display: grid;
-  height: 80vh;
   align-content: center;
   justify-items: center;
   gap: 1rem;
@@ -55,20 +63,19 @@ p {
 }
 
 .logo {
-  margin-bottom: 2rem;
+  margin: 12rem 0 2rem 0;
 }
 
 .intro-title {
-  font-size: 3rem;
-  width: min(800px, 50%);
+  font-size: var(--step-0);
   text-align: center;
 }
 
 .intro-text {
-  font-size: 1.3rem;
+  font-size: var(--step--3);
   letter-spacing: 0.5px;
   color: var(--Grayish-Blue);
-  width: min(800px, 50%);
+  max-width: 50%;
   text-align: center;
 }
 
@@ -91,24 +98,30 @@ p {
   box-shadow: inset 0 -10px 5px -10px #000000;
 }
 
-/* Button Green */
 .btn-ios {
-  background-color: var(--Strong-Cyan);
+  background-color: var(--Darker-Green);
+}
+.btn-ios:hover {
+  background-color: var(--Dark-Green);
 }
 
-/* Button Blue */
+.btn-ios:focus-visible {
+  outline: #8a0000 5px solid;
+  outline-offset: 3px;
+}
+
 .btn-mac {
   background-color: var(--Light-Blue);
 }
 
-/* Hover States */
 .btn-mac:hover {
   background-color: var(--Lighter-Blue);
   transition: 0.2s ease-in-out;
 }
 
-.footer-links a:hover {
-  color: var(--Strong-Cyan);
+.btn-mac:focus-visible {
+  outline: #8a0000 5px solid;
+  outline-offset: 3px;
 }
 
 :hover {
@@ -121,20 +134,21 @@ p {
   justify-items: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 5rem;
+  margin: 10rem 0 5rem 0;
 }
 
 .sub-title {
-  font-size: 2.2rem;
+  font-size: var(--step--1);
   text-align: center;
 }
 
 .sub-text {
-  font-size: 1rem;
+  font-size: var(--step--4);
   color: var(--Grayish-Blue);
   margin: 0 auto;
-  width: min(800px, 80%);
+  max-width: 45%;
   text-align: center;
+  line-height: 2;
 }
 
 /* iMac Section */
@@ -142,7 +156,6 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 50vh;
 }
 
 .img-imac {
@@ -150,31 +163,32 @@ p {
   width: 100%;
 }
 
-.imac-aside {
+.imac-text {
   display: grid;
   justify-self: center;
   gap: 4rem;
   margin: 4rem 6rem 4rem 0;
-  width: 50%;
+  max-width: 50%;
 }
 
-.imac-aside h3 {
-  font-size: 1.5rem;
+.imac-text h2 {
+  font-size: var(--step--3);
+  line-height: 2;
 }
 
-.imac-aside p {
+.imac-text p {
   color: var(--Grayish-Blue);
+  line-height: 2;
 }
 
 /* Tablet Section */
 .tablet-section {
-  margin-top: 20rem;
+  margin-top: 10rem;
   text-align: center;
 }
 
 .tablet-section .sub-text {
   margin-bottom: 5rem;
-  width: min(600px, 70%);
 }
 
 /* Supercharge Your Workflow */
@@ -202,7 +216,7 @@ p {
 }
 
 .supercharge-logos {
-  width: 40px;
+  max-width: 5rem;
 }
 
 .card {
@@ -212,11 +226,10 @@ p {
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: var(--step--3);
 }
 
 .card-text {
-  width: min(700px, 80%);
   line-height: 2;
   color: var(--Grayish-Blue);
 }
@@ -240,7 +253,7 @@ p {
 }
 
 .clipboard-section .sub-text {
-  width: min(800px, 65%);
+  min-width: 80%;
 }
 
 .clipboard-section .cta-buttons {
@@ -258,7 +271,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  padding: 2.5rem 0;
 }
 
 .footer-logo {
@@ -281,7 +294,8 @@ footer {
 
 footer a {
   color: var(--Dark-Grayish-Blue);
-  font-size: 1.2rem;
+  font-size: var(--step--4);
+  font-weight: 500;
 }
 
 /* Social Media Icons */
@@ -293,99 +307,52 @@ footer a {
   gap: 2rem;
 }
 
-svg {
-  height: auto;
+svg path:hover {
+  fill: var(--Dark-Green);
 }
 
-svg path:hover {
-  fill: var(--Strong-Cyan);
+.footer-links a:hover {
+  color: var(--Dark-Green);
 }
 
 /*  (iPads, Tablets, 481px and 820px) */
 @media only screen and (min-width: 481px) and (max-width: 820px) {
-  /********** HEADER **********/
   .intro {
     display: grid;
-    height: 80vh;
     align-content: center;
     justify-items: center;
     text-align: center;
     gap: 1rem;
-
     background-image: url(./images/bg-header-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .intro-title {
-    font-size: 2.5rem;
-    width: min(800px, 90%);
-  }
-
   .intro-text {
-    font-size: 1rem;
-    color: var(--Grayish-Blue);
-    width: min(800px, 80%);
+    max-width: 80%;
   }
 
-  .cta-buttons {
-    flex-direction: row;
-    width: min(800px, 80%);
-  }
-
-  .sub-title {
-    font-size: 1.8rem;
-    width: min(800px, 70%);
+  .sub-intro {
+    margin-top: 7rem;
   }
 
   .sub-text {
-    font-size: 1rem;
-    color: var(--Grayish-Blue);
-    text-align: center;
+    max-width: 80%;
   }
 
-  .imac-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 30vh;
-  }
-
-  .img-imac {
-    transform: translateX(0%);
-    max-width: 100vw;
-    margin: 0 auto;
-  }
-
-  .imac-aside {
+  .imac-text {
     display: grid;
     gap: 2rem;
     margin: 4rem 0;
-    width: min(300px, 80%);
     text-align: left;
   }
 
-  .tablet-section {
-    margin-top: 20rem;
-  }
-
-  .tablet-section .sub-title {
-    text-align: center;
-    width: min(800px, 70%);
-    margin: 0 auto;
-  }
-
   .tablet-section .sub-text {
-    width: min(800px, 80%);
     margin-top: 1rem;
   }
 
   .img-tablet {
-    max-width: 82vw;
-  }
-
-  .supercharge-section .sub-title {
-    margin: 0 auto;
+    max-width: 80%;
   }
 
   .grid-container-supercharge {
@@ -393,6 +360,7 @@ svg path:hover {
     gap: 0rem;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    align-content: center;
   }
 
   .card {
@@ -401,11 +369,11 @@ svg path:hover {
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: var(--step--3);
   }
 
   .card-text {
-    width: min(700px, 80%);
+    margin: 0 1rem;
   }
 
   .company-logos-section {
@@ -413,20 +381,10 @@ svg path:hover {
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0rem;
   }
 
   .company-card {
-    width: min(100px, 80%);
-  }
-
-  .clipboard-section .sub-title {
-    width: min(800px, 80%);
-    margin: 0 auto;
-  }
-
-  .clipboard-section .sub-text {
-    width: min(800px, 80%);
+    max-width: 60%;
   }
 
   .footer-containers {
@@ -434,7 +392,7 @@ svg path:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+    padding: 0;
   }
 
   .footer-logo {
@@ -467,26 +425,26 @@ svg path:hover {
 @media (max-width: 480px) {
   .intro {
     display: grid;
-    height: 80vh;
     align-content: center;
     justify-items: center;
     text-align: center;
     gap: 1rem;
-
     background-image: url(./images/bg-header-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
   }
 
+  .logo {
+    margin: 7rem 0 2rem 0;
+  }
+
   .intro-title {
-    font-size: 2rem;
-    width: min(800px, 90%);
+    width: 90%;
   }
 
   .intro-text {
-    font-size: 0.9rem;
-    color: var(--Grayish-Blue);
-    width: min(800px, 80%);
+    font-size: var(--step--4);
+    max-width: 100%;
   }
 
   .cta-buttons {
@@ -495,16 +453,17 @@ svg path:hover {
   }
 
   .sub-title {
-    font-size: 1.8rem;
-    width: min(800px, 70%);
+    font-size: var(--step--1);
+    width: 80%;
   }
 
   .sub-intro {
-    margin: 5rem 0;
+    margin: 10rem 0 5rem 0;
   }
 
   .sub-text {
-    font-size: 1rem;
+    font-size: var(--step--4);
+    max-width: 80%;
     color: var(--Grayish-Blue);
     text-align: center;
   }
@@ -513,24 +472,20 @@ svg path:hover {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    height: 50vh;
   }
 
   .img-imac {
     transform: translateX(0%);
-    max-width: 82vw;
+    max-width: 80%;
     margin: 0 auto;
   }
 
-  .imac-aside {
+  .imac-text {
     display: grid;
     margin: 4rem 0;
     width: 80%;
     text-align: center;
-  }
-
-  .tablet-section {
-    margin-top: 30rem;
+    max-width: 80%;
   }
 
   .tablet-section .sub-title {
@@ -540,12 +495,11 @@ svg path:hover {
   }
 
   .tablet-section .sub-text {
-    width: min(800px, 80%);
     margin-top: 1rem;
   }
 
   .img-tablet {
-    max-width: 82vw;
+    max-width: 80%;
   }
 
   .supercharge-section .sub-title {
@@ -568,7 +522,7 @@ svg path:hover {
   }
 
   .card-text {
-    width: min(700px, 80%);
+    width: 90%;
   }
 
   .company-logos-section {
@@ -580,12 +534,7 @@ svg path:hover {
   }
 
   .clipboard-section .sub-title {
-    width: min(800px, 80%);
     margin: 0 auto;
-  }
-
-  .clipboard-section .sub-text {
-    width: min(800px, 80%);
   }
 
   .footer-containers {
@@ -593,7 +542,7 @@ svg path:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+    padding: 0;
   }
 
   .footer-logo {
