@@ -17,13 +17,7 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
-### Original Design
-
-![](./design/original-design-desktop.jpg)
-
-![](./design/original-design-mobile.jpg)
-
-### Screenshots of my design
+### Screenshots
 
 ![](./design/screenshot01-desktop.png)
 
